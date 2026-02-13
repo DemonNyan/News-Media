@@ -45,7 +45,7 @@ export default function Home() {
     }
   };
 
-  console.log(newsData.length);
+  // console.log(newsData.length);
 
   return (
     <div className="container  mx-auto px-4 py-8">
