@@ -12,7 +12,7 @@ require("dotenv").config();
 const app = express();
 app.use(morgan("dev")); //middleware
 app.use(express.json()); //Json Format
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); //port //cookie creditianl cors
+app.use(cors({ origin: "https://news-media-frontend.onrender.com", credentials: true })); //port //cookie creditianl cors
 app.use(cookieParser()); // cookie
 
 const mongodbUrl =
