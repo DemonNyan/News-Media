@@ -37,7 +37,7 @@ function CreateNews() {
       let res;
 
       if (id) {
-        res = await axiosApi.post("/api/news/" + id, news);
+        res = await axiosApi.patch("/api/news/" + id, news);
       } else {
         res = await axiosApi.post("/api/news/", news);
       }

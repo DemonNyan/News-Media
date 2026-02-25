@@ -1,6 +1,6 @@
 // import axios from "axios";
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import axiosApi from "../api/axios";
 
 const Detail = () => {
@@ -20,6 +20,14 @@ const Detail = () => {
 
   return (
     <>
+      <Link
+        to="/"
+        className="text-2xl font-semibold  hover:text-green-300 text-green-600 "
+      >
+        Back
+      </Link>
+      <h1 className="text-5xl font-semibold mb-10 mt-10">Detail</h1>
+
       {news && (
         <div className="px-11 mt-20">
           <h1 className="text-5xl font-semibold mb-10">Title:{news.title}</h1>

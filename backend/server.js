@@ -12,14 +12,13 @@ require("dotenv").config();
 const app = express();
 app.use(morgan("dev")); //middleware
 app.use(express.json()); //Json Format
-app.use(cors({ origin: "http://localhost:5173", credentials: true })); //port //cookie creditianl cors
+app.use(cors({ origin: "http://localhost:3000", credentials: true })); //port //cookie creditianl cors
 app.use(cookieParser()); // cookie
 
-const mongodbUrl =
-  "mongodb+srv://nyanDemon123:nyanDemon123@newspj.r0dojdo.mongodb.net/?appName=newspj";
+const db = process.env.MONGODB_URL;
 
 mongoose
-  .connect(mongodbUrl)
+  .connect(db)
   .then(() => {
     app.listen(process.env.PORT, () => {
       console.log(`Server is running on port ${process.env.PORT}`);
